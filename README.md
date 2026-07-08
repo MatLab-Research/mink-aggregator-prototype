@@ -73,25 +73,31 @@ The implementation is designed in Node.js to explore and demonstrate core functi
 git clone https://github.com/V-Security-beep/mink-aggregator-prototype.git
 cd mink-aggregator-prototype
 npm install
+```
 
 ### Install Dependencies
-npm install ws node-fetch
+`npm install ws node-fetch`
 
 ### Start WebSocket Server
-node server.js
+`node server.js`
+
 Runs a WebSocket server on ws://localhost:8081.
 
 ### Serve the Web UI
+```sh
 node serve-ui.js
 http://localhost:3000
+```
 
 ### In Two Separate Terminals, Run Clients
-node aggregator-client.js
+`node aggregator-client.js`
+
 This will query TimeMap endpoints for the target URL and broadcast results via WebSocket.
 
 You can change the target URL by modifying the value of targetUrl inside aggregator-client.js.
 
-###What the UI Shows
+### What the UI Shows
+
 Displays a list of archived mementos as they arrive in real time.
 
 Allows testing the full pipeline from client-side fetch → WebSocket broadcast, → frontend rendering.
@@ -99,9 +105,7 @@ Allows testing the full pipeline from client-side fetch → WebSocket broadcast,
 ### Video Walkthrough
 Coming soon! A short demo video will explain:
 
-How the backend works.
-
-What the aggregator script does.
-
-How the UI receives and displays mementos.
+* How the backend works.
+* What the aggregator script does.
+* How the UI receives and displays mementos.
 
